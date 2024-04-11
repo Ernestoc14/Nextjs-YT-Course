@@ -1,9 +1,13 @@
 import Link from "next/link"
 
+
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
+    <nav className="flex justify-between">
+      <Link href="/">
+        <h2 className="text-3xl">Renta tu Carro</h2>
+      </Link>
+      <ul className="flex gap-6 ">
         <li>
           <Link href="/">Home</Link>
         </li>
@@ -21,4 +25,4 @@ const Navbar = () => {
   )
 }
 
-export default  Navbar
+export default Navbar

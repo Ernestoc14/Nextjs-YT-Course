@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import {Aclonica} from "next/font/google"
-
+import "./globals.css"
 
 const aclonica = Aclonica({
   weight: "400",
@@ -11,8 +11,7 @@ const aclonica = Aclonica({
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body className={aclonica.className}>
-        <h2>Renta tu Carro</h2>
+      <body className={`flex flex-col ${aclonica.className}`}>
         <Navbar />
         {children}
       </body>
