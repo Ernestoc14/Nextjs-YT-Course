@@ -4,7 +4,6 @@ async function getData() {
   const url ="https://motorcycle-specs-database.p.rapidapi.com/make/Yamaha/model/yz125";
   const options = {
     method: "GET",
-    // headers: { "X-Api-Key": "a141PyUM3f7JoY2ZTlY6kg==ZlAiGNVYjYlSD9IO" },
     headers: {
       "X-RapidAPI-Key": "7f84114117msh60749b07331b46ep1a4c46jsn837104533757",
       "X-RapidAPI-Host": "motorcycle-specs-database.p.rapidapi.com",
