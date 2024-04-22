@@ -23,19 +23,22 @@ async function Insta() {
 async function Page() {
   const info = await Insta();
   const posts = info.items;
-  console.log(posts);
+  const postUno = posts[0];
+  const postDos = posts[11];
+  const allposts = postUno + postDos;
+  console.log(allposts)  
 
   return (
-    <div className="flex flex-col justify-center items-center max-h-screen">
+    <div className="flex flex-col justify-center items-center ">
       <h2 className="text-3xl m-10">Posts</h2>
-      <div className="grid grid-cols-3 gap-x-4 mt-12 ">
-        {posts.map((post) => (
+      <div className="grid grid-cols-3 gap-x-4 pt-12 ">
+        {posts.slice(0,).map((post) => (
           <div key={post.id} className="">
             <h2>Post: </h2>
             <Image
               src={post.image_versions[0].url}
               alt="Image"
-              width={80}
+              width={130}
               height={80}
             />
           </div>
