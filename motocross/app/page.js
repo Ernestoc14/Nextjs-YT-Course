@@ -1,7 +1,8 @@
 import MotoImage from "@/components/MotoImage";
 
 async function getData() {
-  const url ="https://motorcycle-specs-database.p.rapidapi.com/make/Yamaha/model/yz125";
+  const url =
+    "https://motorcycle-specs-database.p.rapidapi.com/make/Yamaha/model/yz125";
   const options = {
     method: "GET",
     headers: {
@@ -10,7 +11,7 @@ async function getData() {
     },
   };
   try {
-    const response = await fetch(url, options);
+    const response = await fetch(url, options, { cache: "force-cache" });
     const result = await response.json();
     return result;
   } catch (error) {
