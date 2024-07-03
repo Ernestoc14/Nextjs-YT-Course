@@ -14,6 +14,7 @@ async function Insta() {
   try {
     const response = await fetch(url, options);
     const data = await response.json();
+    console.log(data.data)
     return data.data;
   } catch (error) {
     console.error(error);
@@ -41,6 +42,7 @@ async function Page() {
               width={130}
               height={80}
             />
+            <p>{post.caption_text}</p>
           </div>
         ))}
       </div>
