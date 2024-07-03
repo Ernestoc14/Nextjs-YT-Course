@@ -11,7 +11,7 @@ async function getImage(articleID) {
   };
 
   try {
-    const response = await fetch(url, options);
+    const response = await fetch(url, options, { cache: 'force-cache' });
     const result = await response.json();
     return result;
   } catch (error) {
